@@ -20,10 +20,16 @@ window.onscroll = function(){
 // Hamburger
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('#nav-menu');
+const itemsNav = document.querySelectorAll('.items-nav');
 
 hamburger.addEventListener('click', function(){
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
+    itemsNav.forEach((link) => {
+        link.classList.remove('text-white');
+    });
+    
+
 });
 
 window.addEventListener('click', function(e) {
@@ -34,13 +40,13 @@ window.addEventListener('click', function(e) {
 });
 
 //Dark Mode Toggle
-const darkToggle = document.querySelector('#dark-toggle');
-const html = document.querySelector('html');
+// const darkToggle = document.querySelector('#dark-toggle');
+// const html = document.querySelector('html');
 
-darkToggle.addEventListener('click', function() {
-    if(darkToggle.checked){
-        html.classList.add('dark');
-    }else{
-        html.classList.remove('dark');
-    }
-});
+// darkToggle.addEventListener('click', function() {
+//     if(darkToggle.checked){
+//         html.classList.add('dark');
+//     }else{
+//         html.classList.remove('dark');
+//     }
+// });
